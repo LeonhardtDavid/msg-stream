@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "msg-stream",
+  "compatibility_date": "2026-08-19",
+
+  // Assets only — there is no Worker script, because there is no server code.
+  // `main` is deliberately absent: adding it later is how this grows a backend
+  // without re-platforming, which is the reason for choosing Workers over Pages.
+  "assets": {
+    "directory": "./dist",
+    // public/404.html ships with the build, so unmatched paths should get it.
+    // "single-page-application" would answer every unknown URL with index.html
+    // and a 200, which would hide genuine mistakes.
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  }
+}

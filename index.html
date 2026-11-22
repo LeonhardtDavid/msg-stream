@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" class="h-full antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>msg-stream</title>
+    <meta
+      name="description"
+      content="One inbox for live chat and tips across YouTube, Twitch, Kick and Ceneka."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    <!-- theme-boot: replaced at build time with lib/theme.ts's themeBootScript,
+         which paints the stored theme before first paint so a dark-theme user
+         never sees a white flash on load. -->
+  </head>
+  <body class="min-h-full flex flex-col">
+    <div id="root" class="min-h-full flex flex-col"></div>
+    <script type="module" src="/app/main.ts"></script>
+  </body>
+</html>

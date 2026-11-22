@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Not found · msg-stream</title>
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <!-- Standalone on purpose: served for any unknown path, so it can't rely on
+         the app's bundle. Colours are the app's own ink/panel tokens. -->
+    <style>
+      :root {
+        --ink: #f4f2ee;
+        --text: #16181c;
+        --muted: #5d626c;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #0e1013;
+          --text: #e6e9ef;
+          --muted: #8b94a6;
+        }
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--ink);
+        color: var(--text);
+        font: 15px/1.5 system-ui, sans-serif;
+        padding: 0 16px;
+      }
+      p { color: var(--muted); }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Nothing here</h1>
+      <p>This address isn't part of msg-stream. <a href="/">Open the inbox</a>.</p>
+    </main>
+  </body>
+</html>

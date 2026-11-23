@@ -217,7 +217,8 @@ export class YouTubeAdapter implements SourceAdapter<YouTubeConnectConfig> {
     });
     if (this.pageToken) params.set("pageToken", this.pageToken);
 
-    let nextDelay = MIN_POLL_MS;
+    // Every path below sets it before the next poll is scheduled.
+    let nextDelay: number;
 
     try {
       const res = await fetch(`${LIVE_CHAT_MESSAGES}?${params}`);

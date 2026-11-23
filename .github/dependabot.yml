@@ -39,6 +39,12 @@ updates:
           - vitest
           - "@vitest/*"
           - "@sveltejs/*"
+      # @eslint/js peers on the same ESLint major, so a major of one alone
+      # leaves the pair mismatched.
+      eslint:
+        patterns:
+          - eslint
+          - "@eslint/js"
 
       # Everything the app actually ships. Kept apart from tooling so a
       # failing check here means something a user would notice.
@@ -56,7 +62,7 @@ updates:
           - minor
           - patch
 
-    # Majors outside the `svelte` and `vite` groups are left ungrouped on
+    # Majors outside the `svelte`, `vite` and `eslint` groups are left ungrouped on
     # purpose: they get their own pull request, because they are the ones
     # worth reading.
 

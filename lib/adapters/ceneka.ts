@@ -7,18 +7,16 @@ import type {
 } from "../types";
 
 /**
- * Ceneka (ceneka.net) is a donations platform rather than a streaming one — the
- * Streamlabs/Ko-fi slot in this lineup, and the one source whose events would be
- * pure tips.
+ * Ceneka (ceneka.net) is a donations platform with no realtime API, webhooks or
+ * alert transport of its own. It forwards each donation to the Streamlabs or
+ * StreamElements account the streamer linked in their Ceneka panel, so its
+ * donations reach the feed through those adapters, not this one.
  *
- * It is not implemented because there is no public developer documentation for
- * it: no webhook spec, no socket endpoint, no event schema. Rather than invent
- * one, this adapter holds the seam open and says so in the UI.
- *
- * To finish it, we most likely need an alert-box / widget URL from the Ceneka
- * dashboard (these usually embed a per-user socket token). With one in hand,
- * this becomes a socket connection mapping their payload to a StreamEvent with
- * `kind: "tip"` and an ARS/USD Amount — the rest of the app needs no changes.
+ * This adapter only keeps Ceneka in the source list and tells the user to turn
+ * on Streamlabs or StreamElements. A direct connection was investigated and
+ * rejected: the public donations endpoint sends no CORS headers and has no
+ * currency field. See "Ceneka arrives through Streamlabs or StreamElements" in
+ * the README.
  */
 export class CenekaAdapter implements SourceAdapter<CenekaSettings> {
   platform: Platform = "ceneka";

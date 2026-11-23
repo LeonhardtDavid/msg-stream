@@ -1,6 +1,6 @@
 # msg-stream
 
-A browser-only console that merges live chat and paid messages from YouTube, Twitch, Kick, Streamlabs and StreamElements into one feed. The README's "How it's put together" section maps the code; read it before changing anything structural.
+A browser-only console that merges live chat and paid messages from YouTube, Twitch, Kick, Streamlabs and StreamElements into one feed. Ceneka donations arrive through Streamlabs or StreamElements, since Ceneka has no realtime API of its own. The README's "How it's put together" section maps the code; read it before changing anything structural.
 
 ## Constraints
 

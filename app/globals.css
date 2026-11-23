@@ -674,6 +674,21 @@ fieldset.field {
   background: var(--panel-3);
 }
 
+/* Header link to the repository */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 3px;
+  color: var(--muted);
+  transition: color 120ms ease;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--text);
+}
+
 .btn-primary {
   background: var(--text);
   color: var(--ink);

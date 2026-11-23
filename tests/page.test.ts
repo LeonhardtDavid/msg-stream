@@ -132,3 +132,13 @@ describe("the feed under paid-only capture", () => {
     expect(screen.getAllByText("$5.00")).toHaveLength(1);
   });
 });
+
+describe("the header", () => {
+  it("links to the source code in a new tab", () => {
+    render(Page);
+    const link = screen.getByRole("link", { name: "Source code on GitHub" });
+    expect(link).toHaveAttribute("href", "https://github.com/LeonhardtDavid/msg-stream");
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link.getAttribute("rel")).toContain("noopener");
+  });
+});

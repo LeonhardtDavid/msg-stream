@@ -13,6 +13,7 @@ export type TranslationVars = Record<string, string | number>;
 const en = {
   // Chrome
   settings: "Settings",
+  sourceCode: "Source code on GitHub",
   done: "Done",
   closeSettings: "Close settings",
   loading: "Loading",
@@ -245,6 +246,7 @@ export type TranslationKey = keyof typeof en;
 
 const es: Record<TranslationKey, string> = {
   settings: "Ajustes",
+  sourceCode: "Código fuente en GitHub",
   done: "Listo",
   closeSettings: "Cerrar ajustes",
   loading: "Cargando",

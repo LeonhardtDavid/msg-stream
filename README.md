@@ -367,7 +367,7 @@ npm run deploy         # build and publish, by hand
 ### Deploys come from Cloudflare, checks come from CI
 
 Connect the repo in the Cloudflare dashboard: build command `npm run build`, output directory
-`out`, deploy command `npx wrangler deploy`. Cloudflare then builds and deploys on every push to
+`dist`, deploy command `npx wrangler deploy`. Cloudflare then builds and deploys on every push to
 `main`. **No environment variables** — every credential is entered in the browser and stays there.
 
 `.github/workflows/ci.yml` separately lints, typechecks, tests and builds on every push and pull
